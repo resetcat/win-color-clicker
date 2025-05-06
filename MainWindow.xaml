@@ -1,0 +1,24 @@
+﻿<Window x:Class="ColorClickerApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Color Clicker" Height="230" Width="400">
+    <Grid Margin="15">
+        <StackPanel>
+            <TextBlock Text="Target Color (Hex):"/>
+            <DockPanel>
+                <TextBox x:Name="ColorInput" Text="#FF0000" Width="300"/>
+                <Button Content="🎯" Width="30" Margin="5,0,0,0" Click="PickColorClick"/>
+            </DockPanel>
+            <TextBlock Text="Scan Area (X,Y,Width,Height):"/>
+            <TextBox x:Name="AreaInput" Text="100,100,300,300"/>
+            <TextBlock Text="Interval (ms):"/>
+            <TextBox x:Name="IntervalInput" Text="30"/>
+            <TextBlock Text="Tolerance (0-255):"/>
+            <TextBox x:Name="ToleranceInput" Text="20"/>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <Button Content="Start" Width="80" Click="StartClick"/>
+                <Button Content="Stop" Width="80" Margin="10,0,0,0" Click="StopClick"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
